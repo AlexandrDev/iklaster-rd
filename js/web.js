@@ -35,6 +35,7 @@ $.fn.allCoursesTabs = function() {
 
 // $.ready
 (function($) {
+    $('.all-courses-menu').show(); // fix transition
 
     $('.all-courses').allCoursesTabs();
 
