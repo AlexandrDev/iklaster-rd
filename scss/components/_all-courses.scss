@@ -10,6 +10,8 @@
     
     
     &-menu {
+        opacity: 0;
+        visibility: hidden;
         position: fixed;
         top: 0;
         left: 0;
@@ -17,8 +19,6 @@
         bottom: 0;
         background: #fff;
         z-index: 200;
-        opacity: 0;
-        visibility: hidden;
         transform: scale(0.8);
         transition: all .2s ease;
 
