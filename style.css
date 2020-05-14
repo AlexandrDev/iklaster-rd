@@ -674,11 +674,11 @@ img {
   transition-delay: 1.5s;
 }
 
-.stages-line.animate .stages-line__bold {
+.stages-line.animated .stages-line__bold {
   width: 68.4%;
 }
 
-.stages-line.animate .stages-line__point {
+.stages-line.animated .stages-line__point {
   transform: scale(1);
 }
 

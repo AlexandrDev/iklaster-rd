@@ -56,5 +56,26 @@ $.fn.allCoursesTabs = function() {
         backDelay: 1400,
         cursorChar: '_',
       });
+
+
+    // animate
+    let windowHeight = $(window).height();
+
+    function animateElements() {
+        $('.animate').each(function() {
+            var positionTop = $(this).offset().top,
+                scrollPos = $(window).scrollTop();
+
+            if (scrollPos + windowHeight >= positionTop) {
+                $(this).addClass('animated');
+            }
+        });
+    }
+
+    animateElements();
+
+    $(window).scroll(function(){
+		animateElements();
+	});
         
 })(jQuery);
