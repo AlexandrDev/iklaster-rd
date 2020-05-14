@@ -1,0 +1,209 @@
+.header {
+
+    @include desktop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 30px rgba(19, 36, 52, 0.05);
+        z-index: 100;
+    }
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &-socials {
+        display: inline-flex;
+        padding-top: 12px;
+        margin-left: 94px;
+
+        .link {
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            transition: opacity .1s ease;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &-top-buttons {
+        .button {
+            margin-left: 14px;
+            padding-left: 18px;
+            padding-right: 18px;
+            font-size: 17px;
+            border-radius: 0px 0px 20px 20px;
+            text-transform: none;
+
+            &_white {
+                border: 1px solid $blue;
+                border-top: 0;
+            }
+        }
+
+        .account-button {
+            &__avatar {
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+                
+                &_nologin {
+                    background: #FFFFFF;
+                    border: 1px solid #E8F4FF;
+                    object-fit: scale-down;
+                }
+            }
+        }
+
+        .request-button {
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+                background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='20' fill='none'%3E%3Cpath fill-rule='evenodd' d='M7.078 5.653l-5.115-1.46c-.678-.194-.677-1.16 0-1.352L11.807.027c.126-.036.26-.036.386 0l9.844 2.812c.678.194.677 1.16 0 1.352l-2.303.658v5.697c0 .388-.315.703-.703.703s-.703-.315-.703-.703V5.25l-1.406.402V9.14c0 .266-.15.5-.39.63l-3.11 1.555c-.344.172-.66.394-.938.66-.272.26-.7.26-.972 0a3.84 3.84 0 0 0-.938-.66L7.467 9.77c-.238-.12-.39-.363-.39-.63V5.653zm5.717 4.413l2.72-1.36v-2.65l-3.322.95c-.127.036-.26.036-.386 0l-3.322-.95v2.65l2.72 1.36a5.25 5.25 0 0 1 .795.49 5.25 5.25 0 0 1 .795-.49zm6.49-6.55L12 1.434l-7.284 2.08L12 5.597l7.284-2.08zm3.263 13.36h.75c.388 0 .703.315.703.703s-.315.703-.703.703H16.65c-1.43 0-2.552.317-3.33.943a2.11 2.11 0 0 1-2.639 0c-.78-.626-1.9-.943-3.33-.943H.703c-.388 0-.703-.315-.703-.703s.315-.703.703-.703h.75v-2.11c0-.388.315-.703.703-.703h7.03c1.15 0 2.17.554 2.813 1.41.642-.855 1.664-1.41 2.813-1.41h7.03c.388 0 .703.315.703.703v2.11zm-19.688 0h4.5c1.615 0 2.94.356 3.948 1.057v-.354c0-1.163-.946-2.11-2.11-2.11H2.86v1.406zm9.844.703v.354c1.008-.7 2.333-1.057 3.948-1.057h4.5V15.47h-6.328c-1.163 0-2.11.946-2.11 2.11z' fill='%23fff'/%3E%3C/svg%3E") center/contain no-repeat;
+            }
+        }
+    }
+
+    &-main {
+        padding-bottom: 20px;
+
+        @include desktop {
+            max-width: 100%;
+            padding: 0 3vw;
+        }
+
+        @include phone {
+            padding: 0 4.4vw;
+        }
+    }
+
+    &__logo {
+        margin-top: -4px;
+        
+        @include desktop {
+            align-items: center;
+            margin-top: 0;
+
+            .logo {
+                &-img {
+                    height: 40px;
+                    margin-right: 12px;
+                }
+
+                &-text {
+                    margin: 0;
+                    height: 16px;
+                }
+
+                &-slogan {
+                    display: none;
+                }
+            }
+        }
+
+        @include phone {
+            .logo {
+                &-img {
+                    height: 30px;
+                    margin-right: 9px;
+                }
+
+                &-text {
+                    height: 12px;
+                }
+            }
+        }
+    }
+
+    &__menu-col {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
+
+        @include desktop {
+            align-items: center;
+            margin-top: 0;
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        a {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 24px;
+        }
+
+        .main-menu {
+            @include desktop {
+                display: none;
+            }
+        }
+    }
+
+    &__contacts {
+        margin-left: 30px;
+        text-align: right;
+
+        @include desktop {
+            display: flex;
+            align-items: center;
+        }
+
+        @include phone {
+            margin-left: 0;
+        }
+
+        .phone {
+            font-weight: bold;
+            font-size: 17px;
+            line-height: 24px;
+            @include desktop {
+                font-weight: 400;
+            }
+        }
+
+        .callback {
+            font-size: 15px;
+            line-height: 20px;
+            color: $blue;
+
+            @include desktop {
+                display: block;
+                font-size: 0;
+                width: 24px;
+                height: 24px;
+                background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='none'%3E%3Cpath d='M13.613 14.383c-.7-.39-2-1.233-3.447-2.67s-2.29-2.77-2.684-3.468L9.8 5.893 3.95 0 1.067 2.867C-.028 3.963-.31 5.63.36 7.017c1.026 2.115 2.92 5.307 6.1 8.503s6.38 5.09 8.49 6.12c.5.243 1.037.362 1.57.362.942 0 1.874-.37 2.572-1.07l2.87-2.883-5.97-5.987-2.394 2.32zm4.28 5.335c-.578.578-1.454.73-2.18.375-1.994-.97-5.005-2.76-8.028-5.788s-4.812-6.042-5.78-8.04c-.353-.728-.202-1.606.374-2.182L3.94 2.43l3.443 3.47L5.41 7.9l.238.536c.04.087.975 2.16 3.304 4.49s4.382 3.252 4.468 3.3l.528.232 2.037-1.975 3.566 3.577-1.66 1.668zM15.86 8.092L11.824 4.05 15.86.006l1.213 1.215-1.924 1.926h4.266a2.58 2.58 0 0 1 2.578 2.577L22 10.232l-1.715.002-.005-4.51c0-.475-.387-.86-.863-.86h-4.352l2 2.012-1.213 1.215z' fill='%230098d6'/%3E%3C/svg%3E") center no-repeat;
+                margin-left: 30px;
+            }
+
+            @include phone {
+                display: none;
+            }
+        }
+    }
+}

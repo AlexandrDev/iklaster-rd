@@ -1,0 +1,133 @@
+.top-banner {
+    margin-bottom: 30px;
+
+    @include laptop {
+        margin-bottom: 60px;
+    }
+
+    @include tablet {
+        margin-top: 20px;
+    }
+
+    &__left {
+        margin-top: 60px;
+
+        @include laptop {
+            margin-top: 50px;
+        }
+        @include tablet {
+            margin-top: 15px;
+        }
+    }
+
+    &__title {
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 38px;
+        margin-bottom: 32px;
+
+        @include laptop {
+            margin-bottom: 20px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        @include tablet {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__dynamic-text {
+        color: $blue;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 24px;
+        color: $gray;
+        margin-bottom: 36px;
+
+        @include laptop {
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__course-list {
+        height: 156px;
+        padding-left: 40px;
+        margin-bottom: 40px;
+        opacity: 0;
+        transition: opacity .2s ease;
+
+        &[data-simplebar] {
+            opacity: 1;
+        }
+
+        @include laptop {
+            display: none;
+        }
+    }
+
+    .course-list {
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+        }
+
+        &__icon {
+            display: block;
+            width: 24px;
+            height: 24px;
+            font-size: 18px;
+            line-height: 24px;
+            margin-right: 12px;
+        }
+
+        &__duration {
+            font-size: 16px;
+            line-height: 24px;
+            color: $gray;
+            opacity: 0.6;
+            margin-left: 10px;
+        }
+    }
+
+    &__button {
+        margin-left: 40px;
+
+        @include laptop {
+            margin-left: 0;
+        }
+    }
+
+    &__image {
+        max-width: unset;
+        @include laptop {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        @include tablet {
+            margin: 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

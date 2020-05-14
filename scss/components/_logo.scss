@@ -1,0 +1,23 @@
+.logo {
+    display: flex;
+    align-items: start;
+
+    &-img {
+        margin-right: 23px;
+    }
+
+    &__text {
+        font-size: 0;
+    }
+    
+    &-text {
+        margin-top: 28px;
+        margin-bottom: 8px;
+    }
+
+    &-slogan {
+        font-size: 14px;
+        line-height: 18px;
+        color: $gray;
+    }
+}

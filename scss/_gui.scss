@@ -1,0 +1,143 @@
+@mixin desktop {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media screen and (max-width: 991px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin phone {
+   @media screen and (max-width: 575px) {
+        @content;
+   }
+}
+
+$gray: #4E5B67;
+$blue: #0098D6;
+$blue-light: #80D1F4;
+$blue-grad: linear-gradient(21.29deg, #0098D6 33.92%, #7E88C1 100%);
+
+
+body {
+    font-family: 'Circe', sans-serif;
+    font-weight: 400;
+    color: #000;
+    background: #F3F9FE;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    margin-top: 0;
+}
+
+a:not(.button) {
+    transition: all .16s ease;
+    &:hover {
+        color: $blue;
+    }
+}
+
+h2, .like-h2 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    color: #000000;
+    margin-bottom: 50px;
+
+    @include laptop() {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 40px;
+    }
+}
+
+
+.page-wrapper {
+    @include desktop {
+        padding-top: 70px;
+    }
+}
+
+section {
+    overflow: hidden;
+}
+
+picture {
+    font-size: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.b-dotted {
+    position: relative;
+    padding-bottom: (15+8)+px;
+    
+    &::after {
+        content: '';
+        display: block;
+        width: 44px;
+        height: 8px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='8' fill='none'%3E%3Cpath fill-rule='evenodd' d='M0 4a4 4 0 1 1 8 0 4 4 0 1 1-8 0zm18 0a4 4 0 1 1 8 0 4 4 0 1 1-8 0zm22-4a4 4 0 1 0 0 8 4 4 0 1 0 0-8z' fill='%2380d1f4'/%3E%3C/svg%3E") no-repeat;
+    }
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 34px;
+    padding-right: 34px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &_white {
+        color: #000;
+        border: 2px solid $blue;
+        transition: all .1s ease;
+        &:hover {
+            color: #fff;
+            background: #007FC8;
+            border-color: #007FC8;
+        }
+        &:active {
+            background: #006ABB;
+            border-color: #006ABB;
+        }
+    }
+
+    &_blue {
+        color: #fff;
+        background: $blue-grad;
+        &:hover {
+            background: #007FC8;
+        }
+        &:active {
+            background: #006ABB;
+        }
+    }
+
+    &_viscomp {
+        margin-left: -5px;
+    }
+}

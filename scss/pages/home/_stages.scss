@@ -1,0 +1,117 @@
+.stages {
+    margin-bottom: 115px;
+
+    &__heading {
+        margin-bottom: 60px;
+    }
+
+    &__row {
+        position: relative;
+    }
+
+    &-line {
+        position: absolute;
+        top: 140px;
+        left: -50vw;
+        right: -50vw;
+        height: 2px;
+        background: rgba(78, 91, 103, 0.1);
+
+        &__bold {
+            width: 0%;
+            margin-left: 4%;
+            height: 2px;
+            background: #80D1F4;
+            transition: width 1.6s ease-in-out;
+        }
+
+        &__points {
+            position: relative;
+            width: 68.4%;
+            margin-top: -2px;
+            margin-left: 4%;
+            height: 2px;
+        }
+        &__point {
+            position: absolute;
+            top: -4px;
+            width: 10px;
+            height: 10px;
+            margin-left: -5px;
+            background: #0098D6;
+            border-radius: 50px;
+            transform: scale(0);
+            transition: transform .2s ease-in;
+
+            &:nth-child(1) {
+                left: 0;
+                transition-delay: 0;
+            }
+            &:nth-child(2) {
+                left: 50%;
+                transition-delay: 0.8s;
+            }
+            &:nth-child(3) {
+                left: 100%;
+                transition-delay: 1.5s;
+            }
+        }
+
+        &.animate {
+            .stages-line {
+                &__bold {
+                    width: 68.4%;
+                }
+                &__point {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+    &__stage {
+        margin-bottom: 30px;
+    }
+
+    .stage {
+        &__img {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 110px;
+            font-size: 0;
+            margin-bottom: 64px;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 110px;
+                height: 110px;
+                top: 0;
+                left: -10px;
+                border-radius: 50%;
+                background: $blue-light;
+                z-index: -1;
+            }
+
+            img {
+                margin-left: 12px;
+            }
+        }
+        
+        &__description {
+            font-size: 16px;
+            line-height: 22px;
+            color: $gray;
+        }
+
+        &__title {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin-bottom: 8px;
+        }
+    }
+}

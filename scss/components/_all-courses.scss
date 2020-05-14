@@ -1,0 +1,216 @@
+.all-courses {
+    @include tablet {
+        display: none;
+    }
+
+    &__link {
+        padding-left: 24px;
+        background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Cpath fill-rule='evenodd' d='M0 2a2 2 0 1 1 4 0 2 2 0 1 1-4 0zm12 0a2 2 0 1 1 4 0 2 2 0 1 1-4 0zm-2 0a2 2 0 1 0-4 0 2 2 0 1 0 4 0zM0 8a2 2 0 1 1 4 0 2 2 0 1 1-4 0zm16 0a2 2 0 1 0-4 0 2 2 0 1 0 4 0zM6 8a2 2 0 1 1 4 0 2 2 0 1 1-4 0zm-2 6a2 2 0 1 0-4 0 2 2 0 1 0 4 0zm8 0a2 2 0 1 1 4 0 2 2 0 1 1-4 0zm-2 0a2 2 0 1 0-4 0 2 2 0 1 0 4 0z' fill='%230098d6'/%3E%3C/svg%3E") top 2px left no-repeat;
+    }
+    
+    
+    &-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        z-index: 200;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.8);
+        transition: all .2s ease;
+
+        .all-courses-showed & {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        &__container {
+            position: relative;
+            height: 100%;
+            padding-top: 60px;
+            padding-bottom: 60px;
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                background: #F3F9FE;
+                z-index: -1;
+            }
+            &::before {
+                left: 0;
+                width: 30%;
+                
+                @include desktop {
+                    width: 33.333333%;
+                }
+
+                @include laptop {
+                    width: 41.666667%;
+                }
+            }
+
+            &::after {
+                left: -40vw;
+                width: 40vw;
+            }
+        }
+
+        &__close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid rgba(128, 209, 244, 0.5);
+            background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none'%3E%3Cpath fill-rule='evenodd' d='M14 1.4L12.6 0L7 5.6L1.4 0L0 1.4L5.6 7L0 12.6L1.4 14L7 8.4L12.6 14L14 12.6L8.4 7L14 1.4Z' fill='%234e5b67'/%3E%3C/svg%3E") center no-repeat;
+            cursor: pointer;
+            transition: all .16s ease;
+            z-index: 1;
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            &:active {
+                transform: scale(.96);
+            }
+        }
+
+        .left-menu {
+            max-width: 291px;
+
+            @include laptop {
+                max-width: 230px;
+            }
+
+            &__item {
+                width: 100%;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 26px;
+                padding-right: 34px;
+                margin-bottom: 25px;
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='%23a3b3c3'%3E%3Cpath fill-rule='evenodd' d='M.6 1.4L2 0l6 6-6 6-1.4-1.4L5.2 6 .6 1.4z'/%3E%3C/svg%3E");
+                background-position: right 6px top 6px;
+                background-repeat: no-repeat;
+                cursor: pointer;
+
+                &:hover,
+                &.active {
+                    color: $blue;
+                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='12' fill='%230098D6'%3E%3Cpath fill-rule='evenodd' d='M.6 1.4L2 0l6 6-6 6-1.4-1.4L5.2 6 .6 1.4z'/%3E%3C/svg%3E");
+                }
+
+                @include laptop {
+                    font-size: 16px;
+                    line-height: 130%;
+                    margin-bottom: 20px;
+                    background-size: 7px 11px;
+                    background-position: right 6px top 5px;
+                }
+            }
+        }
+
+        .right-menu {
+            display: none;
+            &.active {
+                display: block;
+            }
+
+            @include desktop {
+                padding-left: 20px;
+            }
+
+            &__tabs {
+                display: flex;
+                margin-bottom: 50px;
+
+                @include laptop {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &__tab {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 44px;
+                padding-left: 22px;
+                padding-right: 22px;                
+                margin-right: 20px;
+                font-size: 18px;
+                white-space: nowrap;
+                border-radius: 25px;
+                border: 1px solid #80D1F4;
+                color: $gray;
+                cursor: pointer;
+                transition: all .16s ease;
+
+                &.active,
+                &:hover {
+                    color: #fff;
+                    border-color: $blue;
+                    background: $blue;
+                }
+
+                &:active {
+                    border-color: #007FC8;
+                    background: #007FC8;
+                }
+
+                @include laptop {
+                    font-size: 16px;
+                    margin-right: 10px;
+                }
+            }
+
+            &__content {
+                display: none;
+                &.active {
+                    display: flex;
+                }
+
+                [class*="col-"] {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &__group-title {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 130%;
+                margin-bottom: 20px;
+
+                @include laptop {
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            &__link {
+                display: block;
+                font-size: 18px;
+                line-height: 130%;
+                color: $gray;
+                margin-bottom: 20px;
+                &:hover {
+                    color: $blue;
+                }
+
+                @include laptop {
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
