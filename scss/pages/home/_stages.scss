@@ -1,60 +1,67 @@
 .stages {
     margin-bottom: 115px;
 
+    @include laptop {
+        margin-bottom: 60px;
+    }
+
     &__heading {
         margin-bottom: 60px;
+        @include laptop {
+            margin-bottom: 30px;
+        }
     }
 
     &__row {
         position: relative;
     }
 
-    &-line {
-        position: absolute;
-        top: 140px;
-        left: -50vw;
-        right: -50vw;
-        height: 2px;
-        background: rgba(78, 91, 103, 0.1);
-
-        &__bold {
-            width: 0%;
-            margin-left: 4%;
-            height: 2px;
-            background: #80D1F4;
-            transition: width 1.6s ease-in-out;
-        }
-
-        &__points {
-            position: relative;
-            width: 68.4%;
-            margin-top: -2px;
-            margin-left: 4%;
-            height: 2px;
-        }
-        &__point {
+    @media screen and (min-width: 992px) {
+        &-line {
             position: absolute;
-            top: -4px;
-            width: 10px;
-            height: 10px;
-            margin-left: -5px;
-            background: #0098D6;
-            border-radius: 50px;
-            transform: scale(0);
-
-            &:nth-child(1) {
-                left: 0;
+            top: 140px;
+            left: -50vw;
+            right: -50vw;
+            height: 2px;
+            background: rgba(78, 91, 103, 0.1);
+    
+            &__bold {
+                width: 0%;
+                margin-left: 4%;
+                height: 2px;
+                background: #80D1F4;
+                transition: width 1.6s ease-in-out;
             }
-            &:nth-child(2) {
-                left: 50%;
+    
+            &__points {
+                position: relative;
+                width: 68.4%;
+                margin-top: -2px;
+                margin-left: 4%;
+                height: 2px;
             }
-            &:nth-child(3) {
-                left: 100%;
+            &__point {
+                position: absolute;
+                top: -4px;
+                width: 10px;
+                height: 10px;
+                margin-left: -5px;
+                background: #0098D6;
+                border-radius: 50px;
+                transform: scale(0);
+    
+                &:nth-child(1) {
+                    left: 0;
+                }
+                &:nth-child(2) {
+                    left: 50%;
+                }
+                &:nth-child(3) {
+                    left: 100%;
+                }
             }
-        }
-
-        &.animated {
-            .stages-line {
+    
+            &.animated .stages-line {
                 &__bold {
                     width: 68.4%;
                 }
@@ -78,8 +85,74 @@
         }
     }
 
+    &-line {
+        @include laptop {
+            &__bold,
+            &__points {
+                position: absolute;
+                top: 0;
+                left: 39px;
+                width: 2px;
+                height: 266px;
+            }
+
+            &__bold {
+                position: absolute;
+                top: 0;
+                left: 39px;
+                width: 2px;
+                height: 266px;
+                background: rgba(128, 209, 244, 0.2);
+            }
+
+            &__point {
+                position: absolute;
+                left: -2px;
+                width: 6px;
+                height: 6px;
+                background: #0098D6;
+                border-radius: 50px;
+                &:nth-child(1) {
+                    top: 78px;
+                }
+                &:nth-child(2) {
+                    top: 183px;
+                }
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+
+        @include phone {
+            &__bold,
+            &__points {
+                left: 44px;
+                height: 240px;
+            }
+
+            &__point {
+                &:nth-child(1) {
+                    top: 72px;
+                }
+                &:nth-child(2) {
+                    top: 162px;
+                }
+            }
+        }
+    }
+    
+
     &__stage {
         margin-bottom: 30px;
+
+        @include laptop {
+            display: flex;
+        }
+
+        @include phone {
+            align-items: center;
+        }
     }
 
     .stage {
@@ -104,8 +177,33 @@
                 z-index: -1;
             }
 
+            @include laptop {
+                flex: 0 0 60px;
+                height: 60px;
+                margin-bottom: 0;
+                &::before {
+                    width: 60px;
+                    height: 60px;
+                    left: -5px;
+                }
+            }
+
+            @include phone {
+                &::before {
+                    left: 0;
+                }
+            }
+
             img {
                 margin-left: 12px;
+
+                @include laptop {
+                    margin-left: 7px;
+                }
+
+                @include phone {
+                    margin-left: 10px;
+                }
             }
         }
         
@@ -113,6 +211,20 @@
             font-size: 16px;
             line-height: 22px;
             color: $gray;
+
+            @include laptop {
+                margin-left: 30px;
+            }
+
+            p {
+                @include laptop {
+                    margin-bottom: 0;
+                }
+
+                @include phone {
+                    display: none;
+                }
+            }
         }
 
         &__title {
@@ -121,6 +233,19 @@
             line-height: 24px;
             color: #000000;
             margin-bottom: 8px;
+
+            @include laptop {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            @include phone {
+                max-width: 200px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 24px;
+                margin: 0;
+            }
         }
     }
 }
