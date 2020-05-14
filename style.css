@@ -656,7 +656,6 @@ img {
   background: #0098D6;
   border-radius: 50px;
   transform: scale(0);
-  transition: transform .2s ease-in;
 }
 
 .stages-line__point:nth-child(1) {
@@ -679,6 +678,7 @@ img {
 }
 
 .stages-line.animated .stages-line__point {
+  transition: transform .2s ease-in;
   transform: scale(1);
 }
 
