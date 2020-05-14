@@ -660,17 +660,14 @@ img {
 
 .stages-line__point:nth-child(1) {
   left: 0;
-  transition-delay: 0;
 }
 
 .stages-line__point:nth-child(2) {
   left: 50%;
-  transition-delay: 0.8s;
 }
 
 .stages-line__point:nth-child(3) {
   left: 100%;
-  transition-delay: 1.5s;
 }
 
 .stages-line.animated .stages-line__bold {
@@ -678,8 +675,22 @@ img {
 }
 
 .stages-line.animated .stages-line__point {
-  transition: transform .2s ease-in;
   transform: scale(1);
+}
+
+.stages-line.animated .stages-line__point:nth-child(1) {
+  transition: transform .2s ease-in;
+  transition-delay: 0;
+}
+
+.stages-line.animated .stages-line__point:nth-child(2) {
+  transition: transform .2s ease-in;
+  transition-delay: 0.8s;
+}
+
+.stages-line.animated .stages-line__point:nth-child(3) {
+  transition: transform .2s ease-in;
+  transition-delay: 1.5s;
 }
 
 .stages__stage {

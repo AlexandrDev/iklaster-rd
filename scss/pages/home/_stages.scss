@@ -44,15 +44,12 @@
 
             &:nth-child(1) {
                 left: 0;
-                transition-delay: 0;
             }
             &:nth-child(2) {
                 left: 50%;
-                transition-delay: 0.8s;
             }
             &:nth-child(3) {
                 left: 100%;
-                transition-delay: 1.5s;
             }
         }
 
@@ -62,8 +59,20 @@
                     width: 68.4%;
                 }
                 &__point {
-                    transition: transform .2s ease-in;
                     transform: scale(1);
+
+                    &:nth-child(1) {
+                        transition: transform .2s ease-in;
+                        transition-delay: 0;
+                    }
+                    &:nth-child(2) {
+                        transition: transform .2s ease-in;
+                        transition-delay: 0.8s;
+                    }
+                    &:nth-child(3) {
+                        transition: transform .2s ease-in;
+                        transition-delay: 1.5s;
+                    }
                 }
             }
         }
