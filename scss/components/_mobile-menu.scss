@@ -1,0 +1,206 @@
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 374px;
+    height: 100vh;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all .2s;
+    z-index: 9;
+
+    @media screen and (min-width: 1200px) {
+        display: none;
+    }
+
+    @include phone {
+        margin-top: 60px;
+        width: 100%;
+        height: calc(100vh - 60px);
+    }
+
+    .menu-opened & {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+
+    &__top {
+        padding-left: 40px;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 70px;
+        color: #000000;
+        box-shadow: 0px 10px 30px rgba(19, 36, 52, 0.05);
+
+        @include phone {
+            display: none;
+        }
+    }
+
+    &__content {
+        max-height: calc(100vh - 70px);
+        overflow: auto;
+        border-top: 2px solid $blue-light;
+        @include phone {
+            max-height: calc(100vh - 60px);
+        }
+    }
+
+    &__items {
+        position: relative;
+        min-height: calc(100vh - 72px);
+        overflow: hidden;
+
+        @include phone {
+            min-height: calc(100vh - 62px);
+        }
+    }
+
+    &__back,
+    &__login {
+        padding-left: 40px;
+        padding-right: 46px;
+        background: #F3F9FE;
+        border-bottom: 1px solid #E8F3FD;
+
+        @include phone {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        > a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 52px;
+            font-size: 16px;
+            line-height: 24px;
+            color: $gray;
+        }
+    }
+
+    &__login {
+        // a {
+        //     height: 52px;
+        // }
+    }
+
+    &__item {
+        margin-left: 40px;
+        margin-right: 46px;
+        border-bottom: 1px solid #E8F3FD;
+
+        @include phone {
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 54px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $gray;
+        }
+    }
+
+    &__back {
+        display: flex;
+        align-items: center;
+        height: 52px;
+
+        .back-arrow {
+            width: 20px;
+            height: 20px;
+            margin-top: -2px;
+            margin-right: 10px;
+            background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23a3b3c3'%3E%3Cpath fill-rule='evenodd' d='M15.333 7.083H4.15L9.283 1.95 8 .667.667 8 8 15.333l1.283-1.283L4.15 8.917h11.183V7.083z'/%3E%3C/svg%3E") center/14px no-repeat;
+            cursor: pointer;
+        }
+
+        > a {
+            font-weight: 600;
+            color: #000;
+        }
+    }
+
+    .submenu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: calc(100vw - 72px);
+        transform: translateX(100%);
+        transition: transform .2s;
+        background: #fff;
+
+        @include phone {
+            min-height: calc(100vh - 62px);
+        }
+    }
+
+    &-parent {
+        > a::after {
+            content: '';
+            display: block;
+            width: 7px;
+            height: 10px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='10' fill='none'%3E%3Cpath opacity='.6' fill-rule='evenodd' d='M0 1.167L3.833 5 0 8.833 1.167 10l5-5-5-5L0 1.167z' fill='%234e5b67'/%3E%3C/svg%3E");
+        }
+
+        &.expanded > .submenu {
+            transform: translateX(0);
+        }
+    }
+
+    &__courses-group {
+        padding-top: 15px;
+        margin-left: 40px;
+        margin-right: 46px;
+        border-bottom: 1px solid #E8F3FD;
+
+        @include phone {
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .courses-group {
+        &__title {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        &__link {
+            margin-bottom: 15px;
+
+            a {
+                line-height: 130%;
+                height: auto;
+            }
+        }
+    }
+
+    
+
+    .socials {
+        margin: 30px 46px 30px 40px;
+        justify-content: center;
+
+        @include phone {
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+    }
+}

@@ -1,5 +1,4 @@
 .header {
-
     @include desktop {
         position: fixed;
         top: 0;
@@ -142,6 +141,7 @@
     }
 
     &__menu-col {
+        position: static;
         display: flex;
         justify-content: flex-end;
         margin-top: 30px;

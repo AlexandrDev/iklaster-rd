@@ -39,6 +39,37 @@ $.fn.allCoursesTabs = function() {
 
     $('.all-courses').allCoursesTabs();
 
+    // mobile menu
+    $('.hamburger').click(function() {
+        if ($('body').hasClass('menu-opened') ) {
+            $('.mobile-menu-parent').removeClass('expanded');
+        }
+        $('body').toggleClass('menu-opened');
+    });
+    // let $mm_container = $('.mobile-menu__items'),
+    //     init_mm_height = $mm_container.height();
+
+
+    // calcMobMenuHeight(init_mm_height);
+
+
+    let navExpand = [].slice.call(document.querySelectorAll('.mobile-menu-parent'));
+
+    navExpand.forEach((item) => {
+        item.querySelector('a').addEventListener('click', (e) => {
+            e.preventDefault();
+            $('.mobile-menu__content').stop().animate({scrollTop:0}, 200, 'swing');
+            // calcMobMenuHeight($(item).find('> .submenu').height());
+            item.classList.add('expanded');
+        });
+        item.querySelector('.back-arrow').addEventListener('click', () => item.classList.remove('expanded'));
+    });
+
+
+    // function calcMobMenuHeight(height) {
+    //     $mm_container.height(height);
+    // }
+
 
     let simplebar = new SimpleBar(document.querySelector('.custom-scroll'), { 
         autoHide: false 

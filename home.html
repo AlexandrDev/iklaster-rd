@@ -151,6 +151,123 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <!--
+                        Построение меню курсов
+
+                        Вывести все категории курсов
+                            Для каждой категории выбрать все записи
+                            Сгруппировать записи по направлениям
+                            Вывести группы (направление - записи)
+
+
+                    -->
+
+                    <div class="mobile-menu">
+                        <div class="mobile-menu__top">Меню</div>
+                        <div class="mobile-menu__content">
+
+                            <!-- <div class="mobile-menu__root">
+                                <div class="mobile-menu__login">
+                                    <a class="login__link" href="">Войти в личный кабинет</a>
+                                </div>
+                                <div class="mobile-menu__item mobile-menu-parent" data-parent="mm-1">
+                                    <a href="">Все курсы</a>
+                                </div>
+                                <div class="mobile-menu__item">
+                                    <a href="">Лицензия</a>
+                                </div>
+                                <div class="mobile-menu__item">
+                                    <a href="">О нас</a>
+                                </div>
+                            </div>
+
+                            <div class="mobile-menu__submenu" data-submenu="mm-1">
+                                <div class="mobile-menu__back">
+                                    <div class="back-arrow"></div><a href="">Все курсы</a>
+                                </div>
+                                <div class="mobile-menu__item mobile-menu-parent" data-parent="mm-sub-1">
+                                    <a href="">Государственная служба</a>
+                                </div>
+                            </div>
+                            <div class="mobile-menu__submenu" data-submenu="mm-sub-1">
+                                <div class="mobile-menu__back">
+                                    <div class="back-arrow"></div><a href="">Государственная служба</a>
+                                </div>
+                                <div class="mobile-menu__courses-group">
+                                    <div class="courses-group__title">Повышение квалификации</div>
+                                    <div class="courses-group__link">
+                                        <a href="">Судебная строительно-техническая и стоимостная экспертиза объектов недвижимости</a>
+                                    </div>
+                                    <div class="courses-group__link">
+                                        <a href="">Геодезия и картография</a>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <div class="mobile-menu__items">
+                                <div class="mobile-menu__login">
+                                    <a class="login__link" href="">
+                                        Войти в личный кабинет
+                                        <img src="images/icon-account.svg" alt="">
+                                    </a>
+                                </div>
+
+                                <div class="mobile-menu__item mobile-menu-parent">
+                                    <a href="">Все курсы</a>
+                                    <div class="submenu">
+                                        <div class="mobile-menu__back">
+                                            <div class="back-arrow"></div><a href="">Все курсы</a>
+                                        </div>
+                                        <div class="mobile-menu__item mobile-menu-parent">
+                                            <a href="">Государственная служба</a>
+                                            <div class="submenu">
+                                                <div class="mobile-menu__back">
+                                                    <div class="back-arrow"></div><a href="">Государственная служба</a>
+                                                </div>
+                                                <div class="mobile-menu__item mobile-menu-parent">
+                                                    <a href="">Геодезия</a>
+                                                    <div class="submenu">
+                                                        <div class="mobile-menu__back"><div class="back-arrow"></div><a href="">Геодезия</a></div>
+                                                        <div class="mobile-menu__courses-group">
+                                                            <div class="courses-group__title">Повышение квалификации</div>
+                                                            <div class="courses-group__link">
+                                                                <a href="">Судебная строительно-техническая и стоимостная экспертиза объектов недвижимости</a>
+                                                            </div>
+                                                            <div class="courses-group__link">
+                                                                <a href="">Геодезия и картография</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mobile-menu__courses-group">
+                                                            <div class="courses-group__title">Повышение квалификации</div>
+                                                            <div class="courses-group__link">
+                                                                <a href="">Судебная строительно-техническая и стоимостная экспертиза объектов недвижимости</a>
+                                                            </div>
+                                                            <div class="courses-group__link">
+                                                                <a href="">Геодезия и картография</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mobile-menu__item"><a href="">123</a></div>
+                                        <div class="mobile-menu__item"><a href="">123</a></div>
+                                        <div class="mobile-menu__item"><a href="">123</a></div>
+                                        <div class="mobile-menu__item"><a href="">123</a></div>
+                                    </div>
+                                </div>
+                                <div class="socials socials_light">
+                                    socials
+                                    <a class="socials__link ab-i-yt" href=""></a>
+                                    <a class="socials__link ab-i-fb" href=""></a>
+                                    <a class="socials__link ab-i-inst" href=""></a>
+                                    <a class="socials__link ab-i-vk" href=""></a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -286,11 +403,44 @@
                     </div>
                 </div>
 
-                <a href="" class="stages__button button button_blue button_viscomp">Начать обучение</a>
+                <a href="" class="stages__button button button_blue vis-compensation">Начать обучение</a>
+            </div>
+        </section>
+
+        <section class="courses">
+            <div class="container">
+                <div class="courses__heading like-h2 b-dotted">Наши курсы</div>
+
+                <form class="search vis-compensation">
+                    <input type="text" class="search__input" placeholder="Поиск по курсам">
+                    <button class="button button_blue">Найти</button>
+                </form>
+
+                <div class="courses__list row">
+                    <div class="col-lg-6">
+                        <div class="course-item">
+                            <a href="">
+                                <div class="course-item__image">
+                                    <img src="" alt="">
+                                </div>
+                            </a>
+                            
+                            <div class="course-item__title">Государственная служба</div>
+                            <div class="course-item__links">
+                                <div class="course-item__links-title">Повышение квалификации</div>
+                                <a href="" class="course-item__link">Формирование антикоррупционного стандарта поведения государственного служащего</a> | 
+                                <a href="" class="course-item__link">Формирование антикоррупционного стандарта поведения государственного служащего</a>
+                            </div>
+                            <a class="link-detailed" href="">Смотреть все</a>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
         </section>
 
     </div>
+
 
     <footer>
         
