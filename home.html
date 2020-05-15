@@ -16,7 +16,10 @@
     <div style="position: fixed;z-index: 999999;">
         <script>
             document.write(screen.width);
-            
+            window.addEventListener("orientationchange", function() {
+    // Выводим числовое значение ориентации
+    document.write(window.orientation);
+}, false);
         </script>
     </div>
     <header class="header">
