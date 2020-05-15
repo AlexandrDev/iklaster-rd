@@ -944,6 +944,11 @@ input {
   color: #ffffff;
 }
 
+.course-item:hover .course-item__links .det,
+.course-item:hover .course-item__link {
+  color: #E5E5E5;
+}
+
 .course-item:hover .link-detailed {
   color: #ffffff;
 }
@@ -977,6 +982,20 @@ input {
 
 .course-item__links {
   position: relative;
+  margin-bottom: 20px;
+}
+
+.course-item__links-title {
+  font-size: 15px;
+  line-height: 18px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.course-item__link,
+.course-item .det {
+  color: #0098D6;
+  transition: color .2s ease;
 }
 
 .course-item .link-detailed {
