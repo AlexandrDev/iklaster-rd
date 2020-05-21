@@ -1,0 +1,18 @@
+.contacts {
+    &__phone {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+    }
+
+    &__button {
+        font-size: 16px;
+        margin-top: 15px;
+        text-transform: none;
+    }
+
+    &__email {
+        font-size: 0;
+        margin-top: 25px;
+    }
+}

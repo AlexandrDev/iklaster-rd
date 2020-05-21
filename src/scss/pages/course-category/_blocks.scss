@@ -1,0 +1,21 @@
+.page-course-category {
+
+    .top-banner {
+        margin-bottom: 10px;
+
+        @include laptop {
+            margin-bottom: 60px;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 30px;
+            @include tablet {
+                display: block;
+            }
+        }
+
+        
+    }
+}

@@ -1,0 +1,23 @@
+.advantages {
+    padding-top: 240px;
+    background: #fff;
+
+    &-wrapper {
+        margin-top: -280px;
+    }
+
+    @include laptop {
+        padding-top: 80px;
+        &-wrapper {
+            margin-top: -145px;
+        }
+    }
+
+    @include phone {
+        padding-top: 60px;
+        &-wrapper {
+            margin-top: -85px;
+            margin-bottom: 30px;
+        }
+    }
+}

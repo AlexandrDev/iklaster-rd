@@ -46,11 +46,6 @@ $.fn.allCoursesTabs = function() {
         }
         $('body').toggleClass('menu-opened');
     });
-    // let $mm_container = $('.mobile-menu__items'),
-    //     init_mm_height = $mm_container.height();
-
-
-    // calcMobMenuHeight(init_mm_height);
 
 
     let navExpand = [].slice.call(document.querySelectorAll('.mobile-menu-parent'));
@@ -59,35 +54,38 @@ $.fn.allCoursesTabs = function() {
         item.querySelector('a').addEventListener('click', (e) => {
             e.preventDefault();
             $('.mobile-menu__content').stop().animate({scrollTop:0}, 200, 'swing');
-            // calcMobMenuHeight($(item).find('> .submenu').height());
             item.classList.add('expanded');
         });
         item.querySelector('.back-arrow').addEventListener('click', () => item.classList.remove('expanded'));
     });
 
+    
+    let custom_scroll;
+    
+    if (custom_scroll = document.querySelector('.custom-scroll')) {
+        let simplebar = new SimpleBar(custom_scroll, { 
+            autoHide: false 
+        });
+    }
 
-    // function calcMobMenuHeight(height) {
-    //     $mm_container.height(height);
-    // }
 
+    let top_dynamic_text;
 
-    let simplebar = new SimpleBar(document.querySelector('.custom-scroll'), { 
-        autoHide: false 
-    });
-
-    let typed = new Typed('.top-dynamic-text', {
-        strings: [
-            'профессиональной переподготовке', 
-            'правовому управлению',
-            'ещё чему-нибудь'
-        ],
-        loop: true,
-        typeSpeed: 10,
-        backSpeed: 10,
-        backDelay: 1400,
-        cursorChar: '_',
-      });
-
+    if (top_dynamic_text = document.querySelector('.top-dynamic-text')) {
+        let typed = new Typed(top_dynamic_text, {
+            strings: [
+                'профессиональной переподготовке', 
+                'правовому управлению',
+                'ещё чему-нибудь'
+            ],
+            loop: true,
+            typeSpeed: 10,
+            backSpeed: 10,
+            backDelay: 1400,
+            cursorChar: '_',
+        });
+    }
+    
 
     // animate
     let windowHeight = $(window).height();

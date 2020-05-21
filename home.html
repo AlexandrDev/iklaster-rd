@@ -158,10 +158,7 @@
                             Для каждой категории выбрать все записи
                             Сгруппировать записи по направлениям
                             Вывести группы (направление - записи)
-
-
                     -->
-
                     <div class="mobile-menu">
                         <div class="mobile-menu__top">Меню</div>
                         <div class="mobile-menu__content">
@@ -279,7 +276,9 @@
                 <div class="row">
                     <div class="top-banner__image-container col-md-5 order-md-2">
                         <picture>
+                            <source media="(max-width: 991px)" srcset="images/homepage-top-banner-bg_768.webp" type="image/webp">
                             <source media="(max-width: 991px)" srcset="images/homepage-top-banner-bg_768.png">
+                            <source srcset="images/homepage-top-banner-bg.webp" type="image/webp">
                             <img src="images/homepage-top-banner-bg.png" alt="" class="top-banner__image">
                         </picture>
                     </div>
@@ -375,7 +374,10 @@
 
                     <div class="stages__stage col-lg-4">
                         <div class="stage__img">
-                            <img src="images/stage-1.png" alt="">
+                            <picture>
+                                <source srcset="images/stage-1.webp" type="image/webp">
+                                <img src="images/stage-1.png" alt="">
+                            </picture>
                         </div>
                         <div class="stage__description">
                             <div class="stage__title">Зачисление в день обращения</div>
@@ -384,7 +386,10 @@
                     </div>
                     <div class="stages__stage col-lg-4">
                         <div class="stage__img">
-                            <img src="images/stage-2.png" alt="">
+                            <picture>
+                                <source srcset="images/stage-2.webp" type="image/webp">
+                                <img src="images/stage-2.png" alt="">
+                            </picture>
                         </div>
                         <div class="stage__description">
                             <div class="stage__title">Обучение на нашей онлайн-площадке</div>
@@ -393,7 +398,10 @@
                     </div>
                     <div class="stages__stage col-lg-4">
                         <div class="stage__img">
-                            <img src="images/stage-3.png" alt="">
+                            <picture>
+                                <source srcset="images/stage-3.webp" type="image/webp">
+                                <img src="images/stage-3.png" alt="">
+                            </picture>
                         </div>
                         <div class="stage__description">
                             <div class="stage__title">Выдача диплома или удостоверения</div>
@@ -406,7 +414,7 @@
             </div>
         </section>
 
-        <section class="courses">
+        <section class="courses courses_homepage">
             <div class="container">
                 <div class="courses__heading like-h2 b-dotted">Наши курсы</div>
 
@@ -417,58 +425,190 @@
 
                 <div class="courses__list row">
                     <div class="col-lg-6">
-                        <div class="course-item">
+                        <div class="course-item showed">
                             <a href="">
                                 <div class="course-item__image">
-                                    <img src="" alt="">
+                                    <picture>
+                                        <source srcset="images/courses/gos-slujba.webp" type="image/webp">
+                                        <img src="images/courses/gos-slujba.png" alt="">
+                                    </picture>
                                 </div>
                             </a>
-                            <div class="course-item__title">Государственная служба</div>
-                            <div class="course-item__links">
-                                <div class="course-item__links-title">Повышение квалификации</div>
-                                <a href="" class="course-item__link">Формирование антикоррупционного стандарта поведения государственного служащего</a>
-                                <span class="det"> | </span>
-                                <a href="" class="course-item__link">Формирование антикоррупционного стандарта поведения государственного служащего</a>
+                            <div class="course-item__title">
+                                <div class="course-item__toggle"></div>
+                                Государственная служба
                             </div>
-                            <a class="link-detailed" href="">Смотреть все</a>
+                            <div class="course-item__content">
+                                <div class="course-item__links">
+                                    <div class="course-item__links-title">Повышение квалификации</div>
+                                    <a href="" class="course-item__link">Формирование антикоррупционного стандарта поведения государственного служащего</a>
+                                    <span class="det"> | </span>
+                                    <a href="" class="course-item__link">Формирование антикоррупционного стандарта поведения государственного служащего</a>
+                                </div>
+                                <a class="course-item__detailed link-detailed" href="">Смотреть все</a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="course-item">
                             <a href="">
                                 <div class="course-item__image">
-                                    <img src="" alt="">
+                                    <picture>
+                                        <source srcset="images/courses/zakupki.webp" type="image/webp">
+                                        <img src="images/courses/zakupki.png" alt="">
+                                    </picture>
                                 </div>
                             </a>
-                            <div class="course-item__title">Закупки</div>
-                            <div class="course-item__links">
-                                <div class="course-item__links-title">Повышение квалификации</div>
-                                <a href="" class="course-item__link">Геодезическое сопровождение строительства</a>
-                                <span class="det"> | </span>
-                                <a href="" class="course-item__link">Геодезия при инженерных изысканиях</a>
-                                <span class="det"> | </span>
-                                <a href="" class="course-item__link">Геодезия и картография</a>
+                            <div class="course-item__title">
+                                <div class="course-item__toggle"></div>
+                                Закупки
                             </div>
-                            <div class="course-item__links">
-                                <div class="course-item__links-title">Профессиональная переподготовка</div>
-                                <a href="" class="course-item__link">Инженерная геодезия</a>
-                                <span class="det"> | </span>
-                                <a href="" class="course-item__link">Геодезия и картография</a>
-                                <span class="det"> | </span>
-                                <a href="" class="course-item__link">Геодезия</a>
+                            <div class="course-item__content">
+                                <div class="course-item__links">
+                                    <div class="course-item__links-title">Повышение квалификации</div>
+                                    <a href="" class="course-item__link">Геодезическое сопровождение строительства</a>
+                                    <span class="det"> | </span>
+                                    <a href="" class="course-item__link">Геодезия при инженерных изысканиях</a>
+                                    <span class="det"> | </span>
+                                    <a href="" class="course-item__link">Геодезия и картография</a>
+                                </div>
+                                <div class="course-item__links">
+                                    <div class="course-item__links-title">Профессиональная переподготовка</div>
+                                    <a href="" class="course-item__link">Инженерная геодезия</a>
+                                    <span class="det"> | </span>
+                                    <a href="" class="course-item__link">Геодезия и картография</a>
+                                    <span class="det"> | </span>
+                                    <a href="" class="course-item__link">Геодезия</a>
+                                </div>
+                                <a class="course-item__detailed link-detailed" href="">Смотреть все</a>
                             </div>
-                            <a class="link-detailed" href="">Смотреть все</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="advantages-wrapper">
+            <div class="wave-background"></div>
+            <div class="advantages">
+                <div class="container">
+                    <div class="advantages__heading like-h2 b-dotted">Почему вам нужно учиться <br>в институте Кластер?!</div>
+
+                    <div class="advantages__list row">
+                        <div class="item col-lg-3">
+                            <img src="" alt="" class="item__image">
+                            <div class="item__title">Современные технологии обучения</div>
+                            <p>Видеолекции, интерактивные задания, презентации и подборка литературы. Используйте образовательную онлайн платформу iKlaster в режиме "24/7", в любое удобном месте, с любого устройства</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wave-background wave-background_bottom"></div>
+        </section>
+
+        <section class="blog-in-page">
+            <div class="container">
+                <div class="blog-in-page__heading">
+                    <div class="like-h2 b-dotted">Новости <br>института Кластер</div>
+                    <a href="" class="link-detailed">Смотреть все новости</a>
+                </div>
+                
+
+                
+            </div>
+        </section>
+
     </div>
 
 
-    <footer>
+    <footer class="footer">
+        <div class="wave-background"></div>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-top__main col-lg-3">
+                        <a href="" class="footer__logo logo">
+                            <img src="images/logo-img.svg" alt="" class="logo-img">
+                            <div class="logo__text">
+                                <img src="images/logo-text.svg" alt="" class="logo-text">
+                                <div class="logo-slogan">Институт дистанционного обучения</div>
+                            </div>
+                        </a>
+                        <p class="footer__description">
+                            Институт инновационных технологий образования «Кластер» — повышение квалификации и профессиональная переподготовка по РФ дистанционно.
+                        </p>
+                        <p class="footer__description">Сведения об образовательной организации</p>
+                    </div>
+                    <div class="footer__cols col-lg-9">
+                        <div class="row">
+                            <div class="footer__col col-lg-4 col-xl-3">
+                                <div class="footer__title">Информация</div>
+                                <ul class="footer__menu">
+                                    <li class="item"><a href="">Партнерам</a></li>
+                                    <li class="item"><a href="">Вакансии</a></li>
+                                    <li class="item"><a href="">Контакты</a></li>
+                                    <li class="item"><a href="">Об институте</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer__col col-lg-4 col-xl-3">
+                                <div class="footer__title">Обучение</div>
+                                <ul class="footer__menu">
+                                    <li class="item"><a href="">Партнерам</a></li>
+                                    <li class="item"><a href="">Вакансии</a></li>
+                                    <li class="item"><a href="">Контакты</a></li>
+                                    <li class="item"><a href="">Об институте</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer__col col-lg-4 col-xl-3">
+                                <div class="footer__title">Полезное</div>
+                                <ul class="footer__menu">
+                                    <li class="item"><a href="">Партнерам</a></li>
+                                    <li class="item"><a href="">Вакансии</a></li>
+                                    <li class="item"><a href="">Контакты</a></li>
+                                    <li class="item"><a href="">Об институте</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer__contacts contacts col-lg-12 col-xl-auto">
+                                <div class="footer__title">Контакты</div>
+                                <div class="contacts__phone">
+                                    <div class="phone-label">Бесплатно по РФ</div>
+                                    <a href="" class="phone-link">8 800 505-56-03</a>
+                                </div>
+
+                                <a href="" class="contacts__button button button_blue vis-compensation">Заказать звонок</a>
+
+                                <div class="contacts__email">
+                                    <a href="" class="email-link">info@iklaster</a>
+                                </div>
         
+                                <div class="footer__socials socials">
+                                    <a class="socials__link i--soc-vk" href=""></a>
+                                    <a class="socials__link i--soc-inst" href=""></a>
+                                    <a class="socials__link i--soc-ok" href=""></a>
+                                    <a class="socials__link i--soc-fb" href=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom__content">
+                    <div class="footer-bottom__links">
+                        <div class="copyright">© 2020, Институт «Кластер»</div>
+                        <div class="det"></div>
+                        <a href="" class="footer-bottom__link">Политика конфиденциальности</a>
+                    </div>
+                    <div class="dev-by">
+                        Создание и продвижение
+                        <a href="" class="dev-by__link"><img src="images/dev-by-da.svg" alt="Digital Around"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="js/jquery-3.5.1.min.js" defer></script>

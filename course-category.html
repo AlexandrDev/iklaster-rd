@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta id="mvp" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <script>function v(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}v();window.onresize=function(n){v()}</script>
+    <title>Категория курса - Кластер</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/flickity.min.css">
+    <link rel="stylesheet" href="css/simplebar.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top container">
+            <div class="header-socials">
+                <a href="" class="link i--soc-vk-blue"></a>
+                <a href="" class="link i--soc-inst-blue"></a>
+                <a href="" class="link i--soc-ok-blue"></a>
+                <a href="" class="link i--soc-fb-blue"></a>
+            </div>
+            <div class="header-top-buttons">
+                <a href="" class="account-button button button_white">
+                    <img src="images/icon-account.svg" alt="" class="account-button__avatar account-button__avatar_nologin">
+                    Личный кабинет
+                </a>
+                <a href="" class="request-button button button_blue">
+                    Заявка на обучение
+                </a>
+            </div>
+        </div>
+        <div class="header-main container">
+            <div class="row justify-content-between">
+                <div class="col-xl-3 col-auto">
+                    <a href="" class="header__logo logo">
+                        <img src="images/logo-img.svg" alt="" class="logo-img">
+                        <div class="logo__text">
+                            <img src="images/logo-text.svg" alt="" class="logo-text">
+                            <div class="logo-slogan">Институт дистанционного обучения</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="header__menu-col col-auto">
+                    <div class="header__menu">
+                        <div class="all-courses">
+                            <a href="javascript:;" class="all-courses__link">Все курсы</a>
+                        </div>
+                        <nav class="main-menu">
+                            <ul>
+                                <li>
+                                    <a href="">Лицензия</a>
+                                </li>
+                                <li>
+                                    <a href="">Анкета слушателя</a>
+                                </li>
+                                <li>
+                                    <a href="">О нас</a>
+                                </li>
+                                <li>
+                                    <a href="">Блог</a>
+                                </li>
+                                <li>
+                                    <a href="">Отзывы</a>
+                                </li>
+                                <li>
+                                    <a href="">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__contacts">
+                        <div class="header__phone-block">
+                            <a href="" class="phone">8 800 505-56-03</a>
+                        </div>
+                        <div class="header__callback-block">
+                            <a href="" class="callback">Заказать звонок</a>
+                        </div>                     
+                    </div>
+                    <div class="hamburger d-xl-none">
+                        <div class="hamburger-switcher">
+                          <div class="hamburger__icon">
+                              <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <div class="page-course-category page-wrapper">
+        <div class="breadcrumbs container">
+            <div class="breadcrumbs__item"><a href="">Главная</a></div>
+            <div class="breadcrumbs__item"><a href="">Все курсы</a></div>
+            <div class="breadcrumbs__item"><span>Геодезия</span></div>
+        </div>
+
+        <section class="top-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="top-banner__image-container col-md-5 order-md-2">
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="images/geodesia-list-top-img_768.webp" type="image/webp">
+                            <source media="(max-width: 991px)" srcset="images/geodesia-list-top-img_768.png">
+                            <source srcset="images/geodesia-list-top-img.webp" type="image/webp">
+                            <img src="images/geodesia-list-top-img.png" alt="" class="top-banner__image">
+                        </picture>
+                    </div>
+                    <div class="top-banner__left col-md-7 order-md-1">
+                        <div class="top-banner__title like-h2 b-dotted">Курсы по направлению «Геодезия»</div>
+                        <div class="top-banner__text">
+                            Обучение проходит в дистанционном формате через образовательную среду института «Кластер» (платформа Moodle). Программы включают в себя учебно-методический комплекс: видео-лекции по всем основным модулям программы, текстово-презентационные материалы, промежуточное тестирование, активные ссылки на онлайн-источники, список рекомендуемой литературы.
+                        </div>
+        
+                        <a href="" class="top-banner__choise-course link-detailed link-detailed_down">Выбрать курс</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-list container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="courses-list__tabs list-group">
+                        <a href="#courses-qualification" class="courses-list__tab active" data-toggle="list">Повышение квалификации</a>
+                        <a href="#courses-preparation" class="courses-list__tab" data-toggle="list">Профессиональная подготовка</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="courses-list__contents">
+                <div id="courses-qualification" class="courses-list__content fade show active">
+                    <div class="courses-list__description row">
+                        <div class="col-lg-7">
+                            <div class="courses-list__description-text">
+                                <p>В соответствии с профессиональным стандартом "Специалист в области инженерно-геодезических изысканий", утвержденным Приказом Министерства труда и социальной защиты Российской Федерации от 25 декабря 2018 года № 841н, одним из условий осуществления инженерно-геодезических работ является наличие дополнительного профессионального образования в области кадастровой деятельности (при отсутствии профильного образования).</p>
+                                <picture>
+                                    <source srcset="images/course-diploma-1.webp" type="image/webp">
+                                    <img src="images/course-diploma-1.png" alt="" class="courses-list__diploma courses-list__diploma_mob d-block d-lg-none">
+                                </picture>
+                            </div>
+                            <div class="courses-list__advantages">
+                                <div class="item">
+                                    <img src="images/course-advantage-i-1.svg" alt="" class="image">
+                                    <p>Дистанционное обучение <br>в удобное время</p>
+                                </div>
+                                <div class="item">
+                                    <img src="images/course-advantage-i-2.svg" alt="" class="image">
+                                    <p>Три профильных <br>направления обучения</p>
+                                </div>
+                                <div class="item">
+                                    <img src="images/course-advantage-i-3.svg" alt="" class="image">
+                                    <p>Удостоверение <br>государственного образца</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses-list__diploma-col col-lg-5 d-none d-lg-block">
+                            <picture>
+                                <source srcset="images/course-diploma-1.webp" type="image/webp">
+                                <img src="images/course-diploma-1.png" alt="" class="courses-list__diploma">
+                            </picture>
+                        </div>
+                    </div>
+                    
+                    <div class="like-h2 b-dotted">Повышение квалификации по направлению «Геодезия»</div>
+                    <div class="short-text">
+                        Для тех, кто заинтересован в получении данной профессии, а также ее обладателей, желающих углубить свои познания или повысить свою квалификацию
+                    </div>
+
+                    <div class="courses-list__items">
+                        <div class="cousre-item">
+                            <div class="cousre-item__image">
+                                <picture>
+                                    <source srcset="images/dev/course-1.webp" type="image/webp">
+                                    <img src="images/dev/course-1.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="cousre-item__top">
+                                <a href="" class="cousre-item__title">
+                                    Современные технологии и приборы для инженерных изысканий и геодезического сопровождения строительства
+                                </a>
+                                <div class="cousre-item__data">
+                                    <div class="item">
+                                        <div class="item__title">Продолжительность курса</div>
+                                        <div class="item__value">2 недели</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item__title">Академических часов</div>
+                                        <div class="item__value">72 часа</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item__title">Старт курса</div>
+                                        <div class="item__value">16 марта 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cousre-item__bottom">
+                                <div class="cousre-item__price">22 300 ₽</div>
+                                <div class="cousre-item__buttons">
+                                    <a href="" class="button button_blue">записаться</a>
+                                    <a href="" class="cousre-item__readmore button button_white">Подробнее</a>
+                                    <a href="" class="link-detailed"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="cousre-item cousre-item_half">
+                                    <div class="cousre-item__image">
+                                        <picture>
+                                            <source srcset="images/dev/course-2.webp" type="image/webp">
+                                            <img src="images/dev/course-2.png" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="cousre-item__top">
+                                        <a href="" class="cousre-item__title">
+                                            Современные технологии и приборы для инженерных изысканий и геодезического сопровождения строительства
+                                        </a>
+                                        <div class="cousre-item__data">
+                                            <div class="item">
+                                                <div class="item__title">Продолжительность</div>
+                                                <div class="item__value">2 недели</div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="item__title">Академ. часов</div>
+                                                <div class="item__value">72 часа</div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="item__title">Старт курса</div>
+                                                <div class="item__value">16 марта 2020</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cousre-item__bottom">
+                                        <div class="cousre-item__price">
+                                            <div class="price_new">22 300 ₽</div>
+                                            <div class="price_old">22 300 ₽</div>
+                                        </div>
+                                        <div class="cousre-item__buttons">
+                                            <a href="" class="button button_blue">записаться</a>
+                                            <a href="" class="cousre-item__readmore button button_white">Подробнее</a>
+                                            <a href="" class="link-detailed"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="courses-preparation" class="courses-list__content fade">
+                    <div class="courses-list__description row">
+                        <div class="col-lg-7">
+                            <div class="courses-list__description-text">
+                                <p>В соответствии с профессиональным стандартом "Специалист в области инженерно-геодезических изысканий", утвержденным Приказом Министерства труда и социальной защиты Российской Федерации от 25 декабря 2018 года № 841н, одним из условий осуществления инженерно-геодезических работ является наличие дополнительного профессионального образования в области кадастровой деятельности (при отсутствии профильного образования).</p>
+                                <picture>
+                                    <source srcset="images/course-diploma-2.webp" type="image/webp">
+                                    <img src="images/course-diploma-2.png" alt="" class="courses-list__diploma courses-list__diploma_mob d-block d-lg-none">
+                                </picture>
+                            </div>
+                            <div class="courses-list__advantages">
+                                <div class="item">
+                                    <img src="images/course-advantage-i-1.svg" alt="" class="image">
+                                    <p>Дистанционное обучение <br>в удобное время</p>
+                                </div>
+                                <div class="item">
+                                    <img src="images/course-advantage-i-2.svg" alt="" class="image">
+                                    <p>Три профильных <br>направления обучения</p>
+                                </div>
+                                <div class="item">
+                                    <img src="images/course-advantage-i-3.svg" alt="" class="image">
+                                    <p>Удостоверение <br>государственного образца</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="courses-list__diploma-col col-lg-5">
+                            <picture>
+                                <source srcset="images/course-diploma-2.webp" type="image/webp">
+                                <img src="images/course-diploma-2.png" alt="" class="courses-list__diploma d-none d-lg-block">
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="like-h2 b-dotted">Профессиональная переподготовка по направлению «Геодезия»</div>
+                    <div class="short-text">
+                        Для тех, кто заинтересован в получении данной профессии, а также ее обладателей, желающих углубить свои познания или повысить свою квалификацию
+                    </div>
+
+                    <div class="courses-list__items">
+                        <div class="cousre-item">
+                            <div class="cousre-item__image">
+                                <picture>
+                                    <source srcset="images/dev/course-1.webp" type="image/webp">
+                                    <img src="images/dev/course-1.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="cousre-item__top">
+                                <a href="" class="cousre-item__title">
+                                    Современные технологии и приборы для инженерных изысканий и геодезического сопровождения строительства
+                                </a>
+                                <div class="cousre-item__data">
+                                    <div class="item">
+                                        <div class="item__title">Продолжительность курса</div>
+                                        <div class="item__value">2 недели</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item__title">Академических часов</div>
+                                        <div class="item__value">72 часа</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="item__title">Старт курса</div>
+                                        <div class="item__value">16 марта 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cousre-item__bottom">
+                                <div class="cousre-item__price">22 300 ₽</div>
+                                <div class="cousre-item__buttons">
+                                    <a href="" class="button button_blue">записаться</a>
+                                    <a href="" class="cousre-item__readmore button button_white">Подробнее</a>
+                                    <a href="" class="link-detailed"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="about-institute-wrapper">
+            <div class="wave-background"></div>
+            <div class="about-institute">
+                <div class="container">
+                    <div class="like-h2 b-dotted">Институт кластер — твой первый шаг к новой профессии</div>
+
+                    <div class="about-institute__items row">
+                        <div class="col-lg-3">
+                            <div class="item">
+                                <div class="item__img">
+                                    <picture>
+                                        <source srcset="images/stage-2.webp" type="image/webp">
+                                        <img src="images/stage-2.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="item__title">Учим дистанционно</div>
+                                <p>Обучение проходит в дистанционном формате через образвательную среду Института «Кластер»</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="item">
+                                <div class="item__img">
+                                    <picture>
+                                        <source srcset="images/about-inst-diploma.webp" type="image/webp">
+                                        <img src="images/about-inst-diploma.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="item__title">Диплом гос. образца</div>
+                                <p>После прохождения курса Вам выдается диплом или удостоверение</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="item">
+                                <div class="item__img">
+                                    <picture>
+                                        <source srcset="images/about-inst-teach.webp" type="image/webp">
+                                        <img src="images/about-inst-teach.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="item__title">Учиться легко</div>
+                                <p>Видео-лекции по всем основным модулям программы</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="item">
+                                <div class="item__img">
+                                    <picture>
+                                        <source srcset="images/about-inst-stuhelp.webp" type="image/webp">
+                                        <img src="images/about-inst-stuhelp.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="item__title">Помогаем студентам</div>
+                                <p>Техническое и методическое сопровождение всех студентов</p>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                
+            </div>
+            <!-- <div class="wave-background wave-background_bottom"></div> -->
+        </section>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="wave-background"></div>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-top__main col-lg-3">
+                        <a href="" class="footer__logo logo">
+                            <img src="images/logo-img.svg" alt="" class="logo-img">
+                            <div class="logo__text">
+                                <img src="images/logo-text.svg" alt="" class="logo-text">
+                                <div class="logo-slogan">Институт дистанционного обучения</div>
+                            </div>
+                        </a>
+                        <p class="footer__description">
+                            Институт инновационных технологий образования «Кластер» — повышение квалификации и профессиональная переподготовка по РФ дистанционно.
+                        </p>
+                        <p class="footer__description">Сведения об образовательной организации</p>
+                    </div>
+                    <div class="footer__cols col-lg-9">
+                        <div class="row">
+                            <div class="footer__col col-lg-4 col-xl-3">
+                                <div class="footer__title">Информация</div>
+                                <ul class="footer__menu">
+                                    <li class="item"><a href="">Партнерам</a></li>
+                                    <li class="item"><a href="">Вакансии</a></li>
+                                    <li class="item"><a href="">Контакты</a></li>
+                                    <li class="item"><a href="">Об институте</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer__col col-lg-4 col-xl-3">
+                                <div class="footer__title">Обучение</div>
+                                <ul class="footer__menu">
+                                    <li class="item"><a href="">Партнерам</a></li>
+                                    <li class="item"><a href="">Вакансии</a></li>
+                                    <li class="item"><a href="">Контакты</a></li>
+                                    <li class="item"><a href="">Об институте</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer__col col-lg-4 col-xl-3">
+                                <div class="footer__title">Полезное</div>
+                                <ul class="footer__menu">
+                                    <li class="item"><a href="">Партнерам</a></li>
+                                    <li class="item"><a href="">Вакансии</a></li>
+                                    <li class="item"><a href="">Контакты</a></li>
+                                    <li class="item"><a href="">Об институте</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer__contacts contacts col-lg-12 col-xl-auto">
+                                <div class="footer__title">Контакты</div>
+                                <div class="contacts__phone">
+                                    <div class="phone-label">Бесплатно по РФ</div>
+                                    <a href="" class="phone-link">8 800 505-56-03</a>
+                                </div>
+
+                                <a href="" class="contacts__button button button_blue vis-compensation">Заказать звонок</a>
+
+                                <div class="contacts__email">
+                                    <a href="" class="email-link">info@iklaster</a>
+                                </div>
+        
+                                <div class="footer__socials socials">
+                                    <a class="socials__link i--soc-vk" href=""></a>
+                                    <a class="socials__link i--soc-inst" href=""></a>
+                                    <a class="socials__link i--soc-ok" href=""></a>
+                                    <a class="socials__link i--soc-fb" href=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom__content">
+                    <div class="footer-bottom__links">
+                        <div class="copyright">© 2020, Институт «Кластер»</div>
+                        <div class="det"></div>
+                        <a href="" class="footer-bottom__link">Политика конфиденциальности</a>
+                    </div>
+                    <div class="dev-by">
+                        Создание и продвижение
+                        <a href="" class="dev-by__link"><img src="images/dev-by-da.svg" alt="Digital Around"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.5.1.min.js" defer></script>
+    <script src="js/bootstrap.collapse-tab.min.js" defer></script>
+    <script src="js/flickity.pkgd.min.js" defer></script>
+    <script src="js/typed.min.js" defer></script>
+    <script src="js/simplebar.min.js" defer></script>
+    <script src="js/web.js" defer></script>
+</body>
+</html>

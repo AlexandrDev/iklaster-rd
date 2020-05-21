@@ -1,0 +1,226 @@
+.footer {
+
+    &-top,
+    &-bottom {
+        background: #fff;
+    }
+
+    &-top {
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+
+    &__logo {
+        margin-top: -34px;
+        margin-left: -20px;
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        font-size: 16px;
+        line-height: 22px;
+        color: $gray;
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__col {
+        margin-bottom: 40px;
+    }
+
+    &__menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        .item {
+            font-size: 16px;
+            line-height: 24px;
+            color: $gray;
+            margin-bottom: 0.6rem;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+
+    &__contacts {        
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__socials {
+        margin-top: 42px;
+    }
+
+    &-bottom {
+        min-height: 54px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: 1px solid rgba(128, 209, 244, 0.3);
+        font-size: 14px;
+        line-height: 20px;
+        color: $gray;
+
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__links {
+            display: flex;
+            align-items: center;
+        }
+
+        .det {
+            width: 1px;
+            height: 20px;
+            background: $gray;
+            opacity: 0.5;
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+    }
+
+    .dev-by {
+        display: flex;
+        align-items: center;
+
+        &__link {
+            line-height: 0;
+            margin-left: 15px;
+        }
+    }
+
+    @include desktop {
+        &-top {
+            padding-bottom: 25px;
+        }
+        &__cols {
+            padding-left: 40px;
+        }
+
+        &__contacts {
+            .footer__title,
+            .contacts__button {
+                display: none;
+            }
+        }
+
+        .contacts {
+            &__email {
+                margin-top: 0;
+            }
+
+            &__phone {
+                margin-top: 0;
+                margin-right: 58px;
+                margin-left: 58px;
+            }    
+        }
+
+        
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        &__contacts {
+            align-items: flex-end;
+            flex-direction: row;
+        }
+
+        .contacts {
+            &__phone {
+                order: 2;
+            }
+
+            &__email {
+                order: 3;
+            }            
+        }
+
+        &__socials {
+            margin-top: 0;
+            margin-bottom: -5px;
+        }
+    }
+
+
+    @include laptop {
+        &-top__main, &__col {
+            display: none;
+        }
+
+        &__cols {
+            padding-left: 15px;
+        }
+
+        &-bottom {
+            min-height: 50px;
+            font-size: 13px;
+
+            .det {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        .dev-by__link {
+            margin-left: 10px;
+        }
+    }
+
+    @include tablet {
+
+        &__contacts {
+            align-items: center;
+        }
+
+        .contacts {
+            &__phone {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            &__email {
+                margin-top: 20px;
+            }
+        }
+
+        &__socials {
+            margin-top: 20px;
+        }
+
+        &-bottom {
+            font-size: 11px;
+    
+            &__content {
+                display: block;
+            }
+    
+            &__links {
+                justify-content: center;
+                margin-bottom: 5px;
+            }
+    
+            .det {
+                height: 16px;
+            }
+        }
+    
+        .dev-by {
+            justify-content: center;
+
+            &__link {
+                display: block;
+                width: 70px;
+            }
+        }    
+    }
+}
