@@ -79,6 +79,10 @@ input {
   margin-right: -5px;
 }
 
+.t-nowrap {
+  white-space: nowrap;
+}
+
 .b-dotted {
   position: relative;
   padding-bottom: 23px;
@@ -138,6 +142,10 @@ input {
 
 .button_blue:active {
   background: #006ABB;
+}
+
+.link {
+  color: #0098D6;
 }
 
 .link-detailed {
@@ -947,10 +955,6 @@ input {
   background: url("data:image/svg+xml;charset=utf8, %3Csvg width='6' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M.733.933L1.666 0l4 4-4 4-.933-.933L3.8 4 .733.933z' fill='%230098D6'/%3E%3C/svg%3E") center no-repeat;
 }
 
-.breadcrumbs__item > a {
-  color: #0098D6;
-}
-
 .top-banner {
   margin-bottom: 30px;
 }
@@ -1395,12 +1399,15 @@ input {
 
 .about-institute {
   padding-top: 150px;
-  padding-bottom: 120px;
   background: #ffffff;
 }
 
 .about-institute-wrapper {
   margin-top: -250px;
+}
+
+.about-institute__items {
+  margin-bottom: 100px;
 }
 
 .about-institute .item__img {
@@ -1443,6 +1450,188 @@ input {
 .about-institute .item p {
   font-size: 16px;
   line-height: 22px;
+  color: #4E5B67;
+}
+
+.about-institute .algoritm__title,
+.about-institute .requirements__title {
+  margin-bottom: 28px;
+}
+
+.about-institute__algoritm,
+.about-institute__requirements {
+  font-size: 16px;
+  line-height: 22px;
+  color: #4E5B67;
+}
+
+.about-institute__algoritm {
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+.about-institute .algoritm__image {
+  margin-top: 60px;
+}
+
+.about-institute__requirements {
+  position: relative;
+}
+
+.about-institute__requirements::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  background-image: linear-gradient(21.29deg, #0098D6 33.92%, #7E88C1 100%);
+  border-radius: 50px 0 50px 0;
+}
+
+.about-institute .requirements__content {
+  position: relative;
+  padding: 45px;
+  margin: 5px;
+  background: #fff;
+  border-radius: 45px 0 45px 0;
+}
+
+.about-institute .requirements__list {
+  list-style: none;
+  padding: 0;
+}
+
+.about-institute .requirements__list li {
+  margin-bottom: 15px;
+  padding-left: 32px;
+  background: url("data:image/svg+xml;charset=utf8, %3Csvg width='22' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 5L9.95 6.05l4.2 4.2H5v1.5h9.15l-4.2 4.2L11 17l6-6-6-6z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='5' y1='5' x2='14.498' y2='.125' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%230098D6'/%3E%3Cstop offset='1' stop-color='%237E88C1'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E") top left no-repeat;
+}
+
+.review-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 560px;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+}
+
+.review-item__top {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.review-item__photo {
+  width: 120px;
+  height: 120px;
+  padding: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 15px rgba(113, 124, 133, 0.1);
+}
+
+.review-item__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.review-item__letters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: Exo, sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  color: #FFFFFF;
+  letter-spacing: 0.01em;
+  border-radius: 50%;
+  background: #CCEAF7;
+}
+
+.review-item__title {
+  margin-top: 15px;
+}
+
+.review-item__title .name {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+
+.review-item__title .position {
+  font-size: 16px;
+  line-height: 20px;
+  color: #0098D6;
+}
+
+.review-item__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 52px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #FFFFFF;
+  box-shadow: 0px 15px 15px rgba(113, 124, 133, 0.1);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.review-item__content-wrapper {
+  position: relative;
+  display: flex;
+  flex: 1 0 auto;
+  margin-top: -32px;
+}
+
+.review-item__sprout {
+  position: absolute;
+  right: 30px;
+  top: -32px;
+  width: 30px;
+  height: 32px;
+  filter: drop-shadow(0px 15px 15px rgba(113, 124, 133, 0.1));
+}
+
+.review-item__text {
+  flex: 1 0 auto;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4E5B67;
+  margin-bottom: 10px;
+}
+
+.review-item__info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(77, 90, 102, 0.8);
+}
+
+.review-item__info p {
+  margin-bottom: 5px;
+}
+
+.review-item__info p:last-child {
+  margin-bottom: 0;
+}
+
+.review-item__info b {
+  font-weight: 800;
   color: #4E5B67;
 }
 
@@ -1660,6 +1849,10 @@ input {
   .courses_homepage .course-item:hover .course-item__detailed::before {
     border-color: #80D1F4;
     background-color: transparent;
+  }
+
+  .about-institute .algoritm__image {
+    margin-left: -70px;
   }
 }
 
@@ -2141,6 +2334,104 @@ input {
     margin-left: 15px;
   }
 
+  .about-institute {
+    padding-top: 20px;
+  }
+
+  .about-institute-wrapper {
+    margin-top: -80px;
+  }
+
+  .about-institute__title {
+    margin-bottom: 25px;
+  }
+
+  .about-institute__items {
+    margin-bottom: 50px;
+  }
+
+  .about-institute .item {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .about-institute .item__img {
+    flex: 0 0 60px;
+    height: 60px;
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+
+  .about-institute .item__img::before {
+    width: 60px;
+    height: 60px;
+  }
+
+  .about-institute .item__img img {
+    max-width: 100%;
+    margin-left: 12px;
+  }
+
+  .about-institute .item__title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+
+  .about-institute__algoritm,
+  .about-institute__requirements {
+    margin-bottom: 60px;
+  }
+
+  .about-institute__algoritm {
+    padding: 0;
+  }
+
+  .about-institute__requirements::before {
+    border-radius: 25px 0 25px 0;
+  }
+
+  .about-institute .requirements__content {
+    padding: 30px 35px 14px;
+    border-radius: 20px 0 20px 0;
+  }
+
+  .review-item {
+    max-width: 500px;
+  }
+
+  .review-item__photo {
+    width: 75px;
+    height: 75px;
+    padding: 4px;
+    margin-left: 0;
+  }
+
+  .review-item__letters {
+    font-size: 25px;
+  }
+
+  .review-item__title {
+    margin-top: 10px;
+  }
+
+  .review-item__content {
+    padding-top: 30px;
+  }
+
+  .review-item__content-wrapper {
+    margin-top: 12px;
+  }
+
+  .review-item__sprout {
+    width: 26px;
+    right: 20px;
+  }
+
+  .review-item__info {
+    padding-bottom: 26px;
+  }
+
   .footer-top__main,
   .footer__col {
     display: none;
@@ -2218,10 +2509,6 @@ input {
     opacity: 1 !important;
   }
 
-  .courses-list .cousre-item {
-    box-shadow: none;
-  }
-
   .courses-list .cousre-item__image {
     display: none;
   }
@@ -2289,6 +2576,100 @@ input {
 
   .courses-list .cousre-item__buttons .link-detailed {
     display: block;
+  }
+
+  .about-institute {
+    padding-top: 80px;
+  }
+
+  .about-institute-wrapper {
+    margin-top: -140px;
+  }
+
+  .about-institute__items {
+    margin-bottom: 30px;
+  }
+
+  .about-institute .item {
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  .about-institute .item__title {
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #4E5B67;
+  }
+
+  .about-institute .item p {
+    display: none;
+  }
+
+  .about-institute__algoritm,
+  .about-institute__requirements {
+    margin-bottom: 50px;
+  }
+
+  .about-institute .algoritm__image {
+    margin-top: 25px;
+  }
+
+  .about-institute .requirements__content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .review-item {
+    max-width: 290px;
+    height: calc(100% - 25px);
+    margin-bottom: 25px;
+  }
+
+  .review-item__photo {
+    display: none;
+  }
+
+  .review-item__letters {
+    font-size: 25px;
+  }
+
+  .review-item__title {
+    max-width: 220px;
+    margin-top: 0;
+  }
+
+  .review-item__title .name {
+    font-size: 18px;
+  }
+
+  .review-item__content {
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .review-item__content-wrapper {
+    margin-top: 20px;
+  }
+
+  .review-item__sprout {
+    width: 20px;
+    height: 22px;
+    top: -22px;
+  }
+
+  .review-item__text {
+    margin-bottom: 4px;
+  }
+
+  .review-item__info {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  .review-item__info-left {
+    margin-bottom: 10px;
   }
 
   .footer__contacts {
@@ -2472,6 +2853,25 @@ input {
   .advantages-wrapper {
     margin-top: -85px;
     margin-bottom: 30px;
+  }
+
+  .about-institute {
+    padding-top: 120px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .about-institute .algoritm__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-institute .algoritm__image {
+    margin-top: 0;
+  }
+
+  .about-institute .algoritm__picture {
+    flex: 0 0 270px;
   }
 }
 

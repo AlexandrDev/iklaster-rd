@@ -115,6 +115,10 @@ input {
     margin-right: -5px;
 }
 
+.t-nowrap {
+    white-space: nowrap;
+}
+
 .b-dotted {
     position: relative;
     padding-bottom: (15+8)+px;
@@ -170,6 +174,10 @@ input {
             background: #006ABB;
         }
     }
+}
+
+.link {
+    color: $blue;
 }
 
 .link-detailed {

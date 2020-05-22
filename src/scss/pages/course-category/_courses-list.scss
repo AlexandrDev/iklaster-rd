@@ -304,8 +304,6 @@
         }
 
         @include tablet {
-            box-shadow: none;
-
             &__image {
                 display: none;
             }
